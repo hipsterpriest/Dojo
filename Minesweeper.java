@@ -45,16 +45,16 @@ public class Main
         for(int j=0; j<maxY; j++){
             
         mineCount=0;
-        if (inBoard[i][j]!='*'){    // ignore if is  already a mine
+        if (inBoard[i][j]!='*'){    // ignore if is already a mine
             for(int y=0;y<8;y++){
-            newY=j+sweep[y][0];
+            newY=j+sweep[y][0];		// sweep round looking for mines
             newX=i+sweep[y][1];
             
-            // add a minecount if it's not out of bounds and is  a mine
+            // add a minecount if it's not out of bounds and is a mine
             if ((newX>=0) && (newX<maxX) && (newY>=0) && (newY<maxY))
                 mineCount+=(inBoard[newX][newY]=='*')?1:0;    
             }
-        outBoard[i][j]=Character.forDigit(mineCount, 10); // convert like: (char) mineCount;	    
+        outBoard[i][j]=Character.forDigit(mineCount, 10); // convert like: (char)mineCount;	    
         }
 	    
 	    }
@@ -63,8 +63,8 @@ public class Main
 	    
     }
 	
-	// Print the board
-	private static void printBoard(char[][] a){		
+// Print the board
+private static void printBoard(char[][] a){		
     for(int i=0; i<a.length; i++){			
         for(int j=0; j<a[i].length; j++){
 	    System.out.print(a[i][j] + " ");	
