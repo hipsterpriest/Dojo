@@ -7,7 +7,7 @@ public class Main
 	public static void main(String[] args) {
 	    
 	    char[][] inBoard={
-	        {'*', '.', '.', '.', '.'},
+	       {'*', '.', '.', '.', '.'},
 	       {'.', '.', '.', '.', '.'},
 	       {'.', '*', '.', '.', '.'},
 	       {'.', '.', '.', '.', '.'}
@@ -30,14 +30,14 @@ public class Main
 	
 	// Co-ordinate additions used to sweep round a cell looking for possible mines
 	int sweep[][] = { 
-        {-1,0}, 
-        {0,-1}, 
-        {-1,-1}, 
-        {1,1},
-        {-1,1}, 
-        {1,-1},
-        {1,0},
-        {0,1} 
+		{-1,0}, 
+		{0,-1}, 
+		{-1,-1}, 
+		{1,1},
+		{-1,1}, 
+		{1,-1},
+		{1,0},
+		{0,1} 
 	    };
 	
 	int newX, newY;
